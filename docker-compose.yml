@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  lightllm:
+    build: .
+    image: fansichen421/lightllm:latest
+    container_name: lightllm
+    # For AMD ROCm you may need privileged and device mappings. Uncomment or adjust as needed.
+    #privileged: true
+    #devices:
+    #  - /dev/kfd:/dev/kfd
+    #  - /dev/dri:/dev/dri
+    environment:
+      - CONDA_AUTO_ACTIVATE_BASE=false
+    volumes:
+      - ./:/opt/lightLLM
+      - ~/LightLLM:/root/LightLLM
+    ports:
+      - "7860:7860"
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+
+# Notes:
+# - For AMD GPU/ROCm support the host must have ROCm drivers installed and you must provide device access
+#   (e.g. /dev/kfd, /dev/dri). Using privileged: true is sometimes necessary for ROCm containers.
+# - For NVIDIA GPUs use the NVIDIA runtime and `--gpus` flags instead of device mappings.
