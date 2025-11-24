@@ -978,8 +978,21 @@ async def upload_kb(files: list[UploadFile] = File(...), force: bool = Form(Fals
             return JSONResponse(status_code=400, content={"status": "error", "message": "input 目录为空"})
         logger.info(f"发现 {len(input_files)} 个文件: {input_files}")
 
+        # 验证 MiniRAG 主脚本是否存在，避免启动时报错 "No such file or directory"
+        minirag_main = os.path.join(MINIRAG_ROOT, "main.py")
+        if not os.path.exists(MINIRAG_ROOT) or not os.path.exists(minirag_main):
+            err_msg = f"MiniRAG 路径或 main.py 未找到: MINIRAG_ROOT={MINIRAG_ROOT}, main={minirag_main}\n"
+            # 记录到构建日志并返回清晰错误
+            try:
+                with open(build_log_path, "a", encoding="utf-8", errors="ignore") as lf:
+                    lf.write("\n构建异常: " + err_msg + "\n")
+            except Exception:
+                pass
+            logger.error(err_msg)
+            return JSONResponse(status_code=500, content={"status": "error", "message": err_msg})
+
         cmd = [
-            sys.executable, os.path.join(MINIRAG_ROOT, "main.py"),
+            sys.executable, minirag_main,
             "--workingdir", GRAPH_RAG_ROOT,
             "--datapath", GRAPH_RAG_INPUT
         ]
