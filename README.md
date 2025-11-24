@@ -78,4 +78,40 @@ Use /web/start.sh or /web/start.cmd to start engine!
 9. 打开防火墙
 10. 修改绝对路径
 
+## 运行（Run / Usage）
+
+本项目提供两种方便的启动脚本：`web/start.sh`（可单独启动后端或 ollama）和仓库根的 `start_all.sh`（便捷包装，默认调用 `web/start.sh --all --foreground`）。
+
+重要变更：`start_all.sh` 默认现在会以前台模式运行（等同于传入 `--foreground` 给 `web/start.sh`），以便在当前终端持续输出后端或 Ollama 的实时日志。
+
+主要用法示例：
+
+- 在项目根直接启动（默认前台，显示日志）：
+   ```bash
+   cd /path/to/lightLLM
+   ./start_all.sh
+   # 等价于: ./web/start.sh --all --foreground
+   ```
+
+- 只启动后端并保持前台（显示 uvicorn 日志）：
+   ```bash
+   cd web
+   ./start.sh --backend --foreground
+   # 或简写：./start.sh --backend --fg
+   ```
+
+- 后台启动（将日志写入 logs/xxxx.log 文件）：
+   ```bash
+   # 后台运行后端，日志写入 logs/web_uvicorn.log
+   cd web
+   ./start.sh --backend
+   ```
+
+注意事项：
+- 如果希望同时观察后端与 Ollama 的日志，建议在两个不同终端分别运行：
+   - `./start.sh --backend --foreground`（观察后端）
+   - `./start.sh --ollama --foreground`（观察 Ollama）
+- `start_all.sh` 在前台模式下会使用 `exec` 启动 `start.sh`，因此不会返回到 `start_all.sh` 中后续的等待/自动打开浏览器逻辑；这是有意行为以便终端持续显示日志。
+- 若你更想保持原来非阻塞行为，请直接使用 `web/start.sh --backend` 或 `web/start.sh --all`（不加 `--foreground`）。
+
 （结束）
