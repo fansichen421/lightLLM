@@ -1,0 +1,18 @@
+# ini
+.env
+settings.yaml
+
+# input
+input/
+
+# output
+output/
+
+# cache
+cache/
+
+# log
+graphrag_terminal.log
+
+# else
+.DS_Store

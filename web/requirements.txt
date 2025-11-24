@@ -1,0 +1,19 @@
+# Minimal requirements for running the web backend in this repo.
+# We provide a local lightweight `ez_agent` implementation in this repo
+# to avoid the upstream package's Python >=3.13 constraint.
+
+bilibili-api-python>=17.4.0
+beautifulsoup4>=4.13.5
+fastapi>=0.117.1
+uvicorn>=0.17.0
+websockets>=9.1
+httpx>=0.28.1
+psutil>=5.9.0
+volcengine-python-sdk[ark]>=4.0.0
+python-dotenv>=1.0.0
+pillow>=9.0.0
+lxml>=4.9.0
+# multipart support for FastAPI file uploads
+python-multipart>=0.0.5
+# Optional helpers
+requests>=2.31.0

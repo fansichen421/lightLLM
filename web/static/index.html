@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/katex.min.css" />
+    <script src="/static/katex.min.js"></script>
+    <link rel="stylesheet" href="/static/themes/atom-one-light.min.css" />
+    <link rel="stylesheet" href="/static/themes/atom-one-dark.min.css" />
+    <script src="/static/highlight.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .dark-mode .ai-message blockquote {
+        color: #ddd !important;
+      }
+      .dark-mode .ai-message a {
+        color: #bbf !important;
+      }
+    </style>
+    <title>AI for ShanghaiTech</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="header">ai.shanghaitech.online</h1>
+      <!-- 移动端菜单按钮 -->
+      <div class="header-buttons">
+        <button
+          class="history-toggle"
+          id="history-toggle"
+          aria-label="打开历史记录"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="6" y1="12" x2="21" y2="12"></line>
+            <line x1="9" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <button
+        class="dark-mode-toggle"
+        id="dark-mode-toggle"
+        aria-label="切换暗色模式"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path d="M12 2V4" stroke="currentColor" stroke-width="2" />
+          <path d="M12 20V22" stroke="currentColor" stroke-width="2" />
+          <path
+            d="M4.93 4.93L6.34 6.34"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path
+            d="M17.66 17.66L19.07 19.07"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path d="M2 12H4" stroke="currentColor" stroke-width="2" />
+          <path d="M20 12H22" stroke="currentColor" stroke-width="2" />
+          <path
+            d="M6.34 17.66L4.93 19.07"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path
+            d="M19.07 4.93L17.66 6.34"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="container">
+      <!-- 历史记录区 -->
+      <aside class="history-sidebar" id="history">
+        <div class="history-header">&nbsp&nbsp历史记录</div>
+        <div class="clear-btn" id="clear-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <line x1="12" y1="8" x2="12" y2="16" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+          &nbsp; 新对话
+        </div>
+        <div class="history-sidebar-container">
+          <ol class="history-container" id="history-list">
+            <!-- 历史记录将通过 JS 动态生成 -->
+          </ol>
+        </div>
+      </aside>
+      <!-- 聊天区 -->
+      <div class="chat-container">
+        <div class="chat-header">
+          <h2 id="chat-header">新对话</h2>
+          <div class="status connected" id="status">
+            <div class="status-dot"></div>
+            <span id="status-text">未连接</span>
+          </div>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="message ai-message">
+            您好！我是AI助手，有什么可以帮助您的吗？
+          </div>
+        </div>
+
+        <div class="input-area">
+          <textarea
+            class="message-input"
+            id="message-input"
+            placeholder="输入您的问题..."
+            autocomplete="off"
+            rows="1"
+          ></textarea>
+          <label class="send-button"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-label="上传文件"
+            >
+              <path
+                d="M20 19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2z"
+              />
+              <polyline points="15 3 21 3 21 9" />
+            </svg>
+            <input type="file" style="display: none" id="file-input" />
+          </label>
+          <button class="send-button" id="send-button" aria-label="发送消息">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M20 4L11 13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 4L13 20L11 13L4 11L20 4Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+
+
+        <!-- RAG 专用提问区 -->
+        <div id="rag-chat" style="display:none;margin-top:32px;padding:16px 0;border-top:1px solid #eee;">
+          <div class="rag-input-area">
+            <textarea id="rag-input" class="message-input" rows="2" placeholder="基于上传文档提问..."></textarea>
+            <button id="rag-send" class="send-button">RAG 提问</button>
+
+            <!-- 新增：上传知识库文件按钮 -->
+            <button id="rag-upload-btn" class="send-button" style="margin-left:8px;background:#1976d2;color:#fff;">上传知识库</button>
+            <input type="file" id="rag-upload-file" style="display:none" accept=".txt,.md,.csv,.json,.pdf,.doc,.docx" />
+            <!-- 回退内联脚本：确保按钮与文件输入能在任何情况下绑定并上传 -->
+            <script>
+              (function(){
+                try {
+                  const btn = document.getElementById('rag-upload-btn');
+                  const input = document.getElementById('rag-upload-file');
+                  if(!btn || !input) return;
+                  btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    console.log('rag-upload-btn clicked');
+                    input.click();
+                  });
+                  input.addEventListener('change', async function(e){
+                    const file = e.target.files[0];
+                    if(!file) return;
+                    console.log('rag-upload-file selected:', file.name);
+                    const formData = new FormData();
+                    // 使用 'files' 字段名以匹配后端 /upload_kb 的 list[UploadFile] 签名
+                    formData.append('files', file);
+                    try{
+                      const resp = await fetch('/upload_kb', { method: 'POST', body: formData });
+                      if(!resp.ok){
+                        const text = await resp.text();
+                        alert('上传失败: ' + text);
+                      } else {
+                        const data = await resp.json();
+                        alert('上传成功: ' + (data.filename || file.name));
+                      }
+                    }catch(err){
+                      alert('网络错误: ' + err);
+                    }
+                    // 清空选择，允许重复上传同一文件
+                    input.value = '';
+                  });
+                } catch (e) { console.error('inline rag upload error', e); }
+              })();
+            </script>
+          </div>
+          <div id="rag-progress" class="rag-progress">
+            <div id="rag-progress-bar" class="rag-progress-bar"></div>
+            <div id="rag-log" class="rag-log"></div>
+          </div>
+          <div id="rag-answer" class="rag-answer"></div>
+        </div>
+      </div>
+
+      <!-- 侧边栏（移动端可折叠） -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-container">
+          <div class="info-section">
+            <div class="info-item">
+              <div class="info-label">模型</div>
+              <div class="model-select-wrapper" style="position:relative;">
+                <select
+                  class="model-select"
+                  id="model-select"
+                  title="模型选择"
+                >
+                  <!-- 选项将通过 JS 动态生成 -->
+                </select>
+                <div id="model-network-indicator" class="model-network-indicator" title="模型网络状态"></div>
+                <!-- 刷新本地模型按钮 -->
+                <button id="refresh-models-btn" title="刷新本地模型" style="position:absolute; right:4px; top:4px; padding:4px 8px; font-size:12px; border-radius:6px; border:none; background:#e0e0e0; cursor:pointer;">刷新模型</button>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">思考模式</div>
+              <select
+                class="thinking-mode-select"
+                id="thinking-mode-select"
+                title="思考模式选择"
+              >
+                <option value="disabled">禁用</option>
+                <option value="enabled">启用</option>
+                <option value="auto">自动</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <div class="info-label">采样温度 Temperature</div>
+            <label for="temperature-slider"></label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="temperature-slider"
+                class="slider"
+                min="0"
+                max="200"
+                value="100"
+                step="1"
+                aria-label="采样温度"
+              />
+              <span id="temperature-value" , class="value">1.0</span>
+            </div>
+            <div class="info-label">重复惩罚 Frequency Penalty</div>
+            <label for="frequency-penalty-slider"></label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="frequency-penalty-slider"
+                class="slider"
+                min="-200"
+                max="200"
+                value="0"
+                step="1"
+                aria-label="重复惩罚"
+              />
+              <span id="frequency-penalty-value" , class="value">0.0</span>
+            </div>
+          </div>
+          <div class="info-section">
+            <div class="info-label">工具设置</div>
+            <div class="tools-container" id="tools-container">
+              <!-- 工具开关将通过 JS 动态生成 -->
+              <button id="upload-rag-btn" class="tool-upload-btn" style="width:100%;margin:8px 0;padding:8px 0;background:#1976d2;color:#fff;border:none;border-radius:4px;cursor:pointer;">
+                上传RAG文件
+              </button>
+              <input type="file" id="upload-rag-file" style="display:none" accept=".txt,.md,.csv,.json,.pdf,.doc,.docx" />
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="/static/history.js"></script>
+    <script src="/static/settings.js"></script>
+    <script src="/static/render.js"></script>
+    <script src="/static/custom_select.js"></script>
+    <script src="/static/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.configure({ ignoreUnescapedHTML: true });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "google-search": {
+      "command": "./mcp_servers/google-search.sh",
+      "args": []
+    }
+  }
+}
