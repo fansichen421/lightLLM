@@ -75,26 +75,8 @@ Use /web/start.sh or /web/start.cmd to start engine!
      conda activate lightllm
      ```
 
-8. 在该 conda 环境下安装 GraphRAG（项目仓库 & 环境搭建 —— 非常关键）：
-   ```bash
-   git clone https://github.com/zhaoyingjun/graphrag-practice-chinese.git
-   cd graphrag-practice-chinese
-   # 安装项目运行所需的依赖
-   pip install -r ./requirements.txt
-   # 创建 input 目录，用于构建索引的文本文件默认存放于该目录下
-   mkdir -p ./input
-   # 初始化，将在 graphrag-practice-chinese 目录中创建 .env 和 settings.yaml
-   python -m graphrag.index --init --root ./
-   ```
-   修改配置文件以符合刚刚安装的 ollama 模型：
-   - .env 包含运行 GraphRAG pipeline 所需的环境变量（默认包含 GRAPHRAG_API_KEY=<API_KEY>）。
-   - settings.yaml 包含 pipeline 相关设置，根据实际模型路径/名称调整配置以使用 ollama 的模型。
-
-9. 在该环境下安装 MiniRag（推荐从源码安装）：
-   ```bash
-   # 假设已将 MiniRAG 仓库放在当前目录下
-   cd MiniRAG
-   pip install -e .
-   ```
+9. 打开防火墙
+    
+10. 修改绝对路径
 
 （结束）
