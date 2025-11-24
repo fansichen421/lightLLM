@@ -1,0 +1,290 @@
+INFO:     Started server process [207432]
+INFO:     Waiting for application startup.
+ERROR:    Failed to load mcp config: 
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55764 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55764 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55766 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55778 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55800 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55812 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55764 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55778 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55766 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55800 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55812 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /api/generate-user-id/a6965f75-ed12-47b3-8d71-f4437b80e50f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55826 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 0
+INFO:     127.0.0.1:55794 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55840 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     Total users: 2
+INFO:     Active connections: 2
+INFO:     Current agents: 1
+INFO:     127.0.0.1:46882 - "POST /stop_generation/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46882 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46884 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     Agent test-user-1234 removed
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:58806 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:58806 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58816 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58834 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58836 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58844 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58816 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58836 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58844 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58852 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:58806 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:44254 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52580 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47006 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:47006 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47006 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47010 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47032 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47020 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47044 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47006 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47010 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47020 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47032 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47010 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47058 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:54578 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36820 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:36820 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36840 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36830 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36842 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36866 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36854 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36820 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36854 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36840 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36820 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36866 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36830 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36830 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36830 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36830 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36868 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:36830 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:39094 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:39094 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39110 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39136 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39094 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39122 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39138 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39110 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39122 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39136 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39138 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39138 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39138 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39138 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39146 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:39138 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:56048 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36790 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:36790 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36812 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36804 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36818 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36820 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36826 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36790 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36818 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36826 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36790 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36804 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36812 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36812 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36812 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36812 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36842 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:36812 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:50274 - "POST /generate_title HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:49058 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49108 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49108 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49122 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:49086 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:49086 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49108 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60698 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:49062 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:49062 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49108 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49086 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49076 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49108 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49058 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49062 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49102 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60708 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49102 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     127.0.0.1:43870 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:43870 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43874 - "GET /static/marked.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43880 - "GET /static/katex.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43912 - "GET /static/themes/atom-one-dark.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43902 - "GET /static/katex.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43890 - "GET /static/themes/atom-one-light.min.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43870 - "GET /static/highlight.min.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43870 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43880 - "GET /static/settings.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43912 - "GET /static/render.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43874 - "GET /static/history.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43890 - "GET /static/custom_select.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43870 - "GET /api/generate-user-id/791a9515-84fc-4815-8a22-1580aedcc38d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43870 - "GET /data/model_list.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43870 - "POST /tool_list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43928 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:43870 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Total users: 2
+INFO:     Active connections: 1
+INFO:     Current agents: 1
+INFO:     Shutting down
+INFO:     connection closed
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Agent 791a9515-84fc-4815-8a22-1580aedcc38d removed
+INFO:     Total users: 2
+INFO:     Active connections: 0
+INFO:     Current agents: 0
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [207432]
