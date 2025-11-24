@@ -18,11 +18,17 @@ cd "$WEB_DIR"
 # Allow passing args to control what to start (e.g. --backend, --ollama MODEL, --all)
 ARGS=("$@")
 if [ ${#ARGS[@]} -eq 0 ]; then
-  ARGS=("--all")
+  # 默认使用前台模式以便在终端持续输出日志
+  ARGS=("--all" "--foreground")
 fi
 
 echo "Starting services with: ./start.sh ${ARGS[*]}"
-bash ./start.sh "${ARGS[@]}"
+# 如果传入了 --foreground，则用 exec 替换当前进程，保持终端输出
+if printf '%s\n' "${ARGS[@]}" | grep -q -- "--foreground"; then
+  exec bash ./start.sh "${ARGS[@]}"
+else
+  bash ./start.sh "${ARGS[@]}"
+fi
 
 # Wait for backend to be ready
 echo "Waiting for backend to be ready at $URL (timeout ${WAIT_TIMEOUT}s)"
