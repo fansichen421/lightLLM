@@ -2,6 +2,8 @@
 
 A simple and flexible choice to run AI models (LLM) with less spaces
 
+Use MiniRAG、graphrag-practice-chinese and web.
+
 ## V0.0.2
 Use /web/start.sh or /web/start.cmd to start engine!
 
