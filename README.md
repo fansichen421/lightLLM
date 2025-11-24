@@ -76,7 +76,6 @@ Use /web/start.sh or /web/start.cmd to start engine!
      ```
 
 9. 打开防火墙
-    
 10. 修改绝对路径
 
 （结束）
