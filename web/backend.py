@@ -302,7 +302,9 @@ app.mount("/data", StaticFiles(directory=data_dir), name="data")
 # GraphRAG 知识库路径配置
 GRAPH_RAG_ROOT = "./graphrag-practice-chinese/"
 GRAPH_RAG_INPUT = os.path.join(GRAPH_RAG_ROOT, "input")
-MINIRAG_ROOT = "./graphrag-practice-chinese/MiniRAG"
+# MiniRAG 按仓库实际位置部署在项目根的 MiniRAG 目录（之前为子模块形式时路径可能不同）
+# 如果你的环境把 MiniRAG 放到其他位置，请通过环境变量或直接修改此变量。
+MINIRAG_ROOT = "./MiniRAG"
 
 # 确保目录存在
 Path(GRAPH_RAG_INPUT).mkdir(parents=True, exist_ok=True)
